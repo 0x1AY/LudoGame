@@ -56,12 +56,11 @@ class Layout extends JPanel {
         }*/
         for (int i = 1; i < 5; i++) {
             g.setColor(Color.YELLOW);
-            //g.fillArc(x+(i*width),y+(7*height),width-4,height-3,0,360);
-            g.fillArc(x + (i * width), y + (7 * height), width, height, 0, 360);
+            g.fillArc(x + 30 + (i * width), y + (7 * height), width, height, 0, 360);
             g.setColor(Color.GREEN);
             g.fillArc(x + ((8 + i) * width), y + (7 * height), width, height, 0, 360);
             g.setColor(Color.BLUE);
-            g.fillArc(x + (7 * width), y + (i * height), width, height, 0, 360);
+            g.fillArc(x + (7 * width), y + 30 + (i * height), width, height, 0, 360);
             g.setColor(Color.RED);
             g.fillArc(x + ((7) * width), y + ((8 + i) * height), width, height, 0, 360);
         }
@@ -89,8 +88,8 @@ class Layout extends JPanel {
         }
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 5; j++) {
-                g.drawArc(x + ((i + 6) * width), y + (j * height), width, height, 0, 360);
-                g.drawArc(x + ((j) * width), y + ((i + 6) * height), width, height, 0, 360);
+                g.drawArc(x + ((i + 6) * width), y + 30 + (j * height), width, height, 0, 360);
+                g.drawArc(x + 30 + ((j) * width), y + ((i + 6) * height), width, height, 0, 360);
                 g.drawArc(x + ((i + 6) * width), y + ((j + 9) * height), width, height, 0, 360);
                 g.drawArc(x + ((j + 9) * width), y + ((i + 6) * height), width, height, 0, 360);
             }
@@ -108,22 +107,12 @@ class Layout extends JPanel {
                 g.drawArc(temp1 + (2 * i * width) + 0 * width, temp2 + (2 * j * height) + 9 * height, width, height, 0, 360);
             }
         }
-//        g.drawPolygon(xpoints0, ypoints0, npoints);
-//        g.drawPolygon(xpoints1, ypoints1, npoints1);
-//        g.drawPolygon(xpoints2, ypoints2, npoints2);
-//        g.drawPolygon(xpoints3, ypoints3, npoints3);
-        g.drawOval(x + 5 + (6 * width), y + 5 + (2 * height), width - 10, height - 10);
-        g.drawOval(x + 5 + (12 * width), y + 5 + (6 * height), width - 10, height - 10);
-        g.drawOval(x + 5 + (8 * width), y + 5 + (12 * height), width - 10, height - 10);
-        g.drawOval(x + 5 + (2 * width), y + 5 + (8 * height), width - 10, height - 10);
+
+//        g.drawOval(x + 5 + (6 * width), y + 5 + (2 * height), width - 10, height - 10);
+//        g.drawOval(x + 5 + (12 * width), y + 5 + (6 * height), width - 10, height - 10);
+//        g.drawOval(x + 5 + (8 * width), y + 5 + (12 * height), width - 10, height - 10);
+//        g.drawOval(x + 5 + (2 * width), y + 5 + (8 * height), width - 10, height - 10);
         g.setFont(new Font("serif", Font.BOLD, 40));
-//        g.drawString("Player 1", 90, 35);
-//        g.drawString("Player 2", 370, 35);
-//        g.drawString("Player 4", 90, 540);
-//        g.drawString("TOSS", 260, 540);
-//        g.drawString("Instruction:", 550, 300);
-//        g.drawString("1.Press enter to roll dice.", 550, 350);
-//        g.drawString("2.Click on coin to move.", 550, 400);
 
 
     }
