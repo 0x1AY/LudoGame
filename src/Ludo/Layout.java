@@ -56,41 +56,41 @@ public class Layout  extends JPanel {
         for (int i = 1; i < 6; i++) {
             g.setColor(Color.RED);
             //g.fillArc(x+(i*width),y+(7*height),width-4,height-3,0,360);
-            g.fillRect(x + (i * width), y + (7 * height), width, height);
+            g.fillArc(x + (i * width), y + (7 * height), width, height, 0, 360);
             g.setColor(Color.YELLOW);
-            g.fillRect(x + ((8 + i) * width), y + (7 * height), width, height);
+            g.fillArc(x + ((8 + i) * width), y + (7 * height), width, height, 0, 360);
             g.setColor(Color.GREEN);
-            g.fillRect(x + (7 * width), y + (i * height), width, height);
+            g.fillArc(x + (7 * width), y + (i * height), width, height, 0, 360);
             g.setColor(Color.BLUE);
-            g.fillRect(x + ((7) * width), y + ((8 + i) * height), width, height);
+            g.fillArc(x + ((7) * width), y + ((8 + i) * height), width, height, 0, 360);
         }
         g.setColor(Color.RED);
-        g.fillRect(x + (1 * width), y + (6 * height), width, height);
+        g.fillArc(x + (1 * width), y + (6 * height), width, height, 0, 360);
         g.setColor(Color.YELLOW);
-        g.fillRect(x + ((13) * width), y + (8 * height), width, height);
+        g.fillArc(x + ((13) * width), y + (8 * height), width, height, 0, 360);
         g.setColor(Color.GREEN);
-        g.fillRect(x + (8 * width), y + (1 * height), width, height);
+        g.fillArc(x + (8 * width), y + (1 * height), width, height, 0, 360);
         g.setColor(Color.BLUE);
-        g.fillRect(x + ((6) * width), y + ((13) * height), width, height);
+        g.fillArc(x + ((6) * width), y + ((13) * height), width, height, 0, 360);
         int temp1 = x + 45, temp2 = y + 45;
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
                 g.setColor(Color.RED);
-                g.fillRect(temp1 + (2 * i * width), temp2 + (2 * j * height), width, height);
+                g.fillArc(temp1 + (2 * i * width), temp2 + (2 * j * height), width, height, 0, 360);
                 g.setColor(Color.YELLOW);
-                g.fillRect(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 9 * height, width, height);
+                g.fillArc(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 9 * height, width, height, 0, 360);
                 g.setColor(Color.GREEN);
-                g.fillRect(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 0 * height, width, height);
+                g.fillArc(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 0 * height, width, height, 0, 360);
                 g.setColor(Color.BLUE);
-                g.fillRect(temp1 + (2 * i * width) + 0 * width, temp2 + (2 * j * height) + 9 * height, width, height);
+                g.fillArc(temp1 + (2 * i * width) + 0 * width, temp2 + (2 * j * height) + 9 * height, width, height, 0, 360);
             }
         }
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 6; j++) {
-                g.drawRect(x + ((i + 6) * width), y + (j * height), width, height);
-                g.drawRect(x + ((j) * width), y + ((i + 6) * height), width, height);
-                g.drawRect(x + ((i + 6) * width), y + ((j + 9) * height), width, height);
-                g.drawRect(x + ((j + 9) * width), y + ((i + 6) * height), width, height);
+                g.drawArc(x + ((i + 6) * width), y + (j * height), width, height, 0, 360);
+                g.drawArc(x + ((j) * width), y + ((i + 6) * height), width, height, 0, 360);
+                g.drawArc(x + ((i + 6) * width), y + ((j + 9) * height), width, height, 0, 360);
+                g.drawArc(x + ((j + 9) * width), y + ((i + 6) * height), width, height, 0, 360);
             }
         }
         g.drawRect(x + ((1) * width), y + (1 * height), 4 * width, 4 * height);
@@ -100,10 +100,10 @@ public class Layout  extends JPanel {
         g.drawRect(x, y, 15 * width, 15 * height);
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
-                g.drawRect(temp1 + (2 * i * width), temp2 + (2 * j * height), width, height);
-                g.drawRect(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 9 * height, width, height);
-                g.drawRect(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 0 * height, width, height);
-                g.drawRect(temp1 + (2 * i * width) + 0 * width, temp2 + (2 * j * height) + 9 * height, width, height);
+                g.drawArc(temp1 + (2 * i * width), temp2 + (2 * j * height), width, height, 0, 360);
+                g.drawArc(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 9 * height, width, height, 0, 360);
+                g.drawArc(temp1 + (2 * i * width) + 9 * width, temp2 + (2 * j * height) + 0 * height, width, height, 0, 360);
+                g.drawArc(temp1 + (2 * i * width) + 0 * width, temp2 + (2 * j * height) + 9 * height, width, height, 0, 360);
             }
         }
 //        g.drawPolygon(xpoints0, ypoints0, npoints);
