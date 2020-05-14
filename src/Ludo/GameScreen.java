@@ -13,8 +13,9 @@ public class GameScreen {
 		gm.addMouseListener(gm);
 		jframe.add(gm);
 		jframe.setVisible(true);
-		jframe.setTitle("JAVA GUI");
+		jframe.setTitle("LUDO");
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		JMenuBar menuBar = new JMenuBar();
 		JMenu fileMenu = new JMenu("Menu");
 		JMenuItem newMenuItem = new JMenuItem("New Game");
@@ -31,13 +32,7 @@ public class GameScreen {
 		jframe.setJMenuBar(menuBar);
 		jframe.add(menuBar);
 
-//		   jframe.getContentPane().add(BorderLayout.CENTER, panel);
 
-
-//        JFrame frame = new JFrame("LUDO GUI");
-//        frame.setSize(1500,1000);
-//        frame.setVisible(true);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
 }
