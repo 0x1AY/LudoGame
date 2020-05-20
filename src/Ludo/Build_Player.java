@@ -6,18 +6,21 @@ import java.awt.*;
 public class Build_Player {
 
 	Player[] pl = new Player[4];
-	int[][] initialx = {
+	//x coordinates for starting position of each piece
+	static int[][] initialx = {
 			{1, 1, 3, 3},
 			{10, 10, 12, 12},
 			{10, 10, 12, 12},
 			{1, 1, 3, 3}
 	};
-	int[][] initialy = {
+	//y coordinates for starting position of each piece
+	static int[][] initialy = {
 			{1, 3, 1, 3},
 			{1, 3, 1, 3},
 			{10, 12, 10, 12},
 			{10, 12, 10, 12}
 	};
+
 
 	public Build_Player(int height, int width) {
 		// TODO Auto-generated constructor stub

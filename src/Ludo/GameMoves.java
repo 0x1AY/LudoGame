@@ -87,7 +87,7 @@ public class GameMoves extends JPanel implements KeyListener, ActionListener, Mo
 			dice = 1 + (int) (Math.random() * 6);
 			repaint();
 			for (int i = 0; i < 4; i++) {
-				if (p.pl[current_player].pa[i].current != -1 && p.pl[current_player].pa[i].current != 56 && (p.pl[current_player].pa[i].current + dice) <= 56) {
+				if (p.pl[current_player].pa[i].current != -1 && p.pl[current_player].pa[i].current != 47 && (p.pl[current_player].pa[i].current + dice) <= 47) {
 					flag = 1;
 					break;
 				}
@@ -104,6 +104,7 @@ public class GameMoves extends JPanel implements KeyListener, ActionListener, Mo
 	}
 
 	public void mouseClicked(MouseEvent e) {
+		//Logic error in here
 		if (flag == 1) {
 			int x = e.getX();
 			int y = e.getY();
@@ -112,10 +113,12 @@ public class GameMoves extends JPanel implements KeyListener, ActionListener, Mo
 			x = x / 30;
 			y = y / 30;
 			int value = -1;
-			//System.out.println(x+" "+y);
+			//Printing out coordinates in terminal, remove from final work
+			System.out.println(x + " " + y);
+			/////////////////////////
 			if (dice == 6) {
 				for (int i = 0; i < 4; i++) {
-					if (p.pl[current_player].pa[i].x == x && p.pl[current_player].pa[i].y == y && (p.pl[current_player].pa[i].current + dice) <= 56) {
+					if (p.pl[current_player].pa[i].x == x && p.pl[current_player].pa[i].y == y && (p.pl[current_player].pa[i].current + dice) <= 47) {
 						value = i;
 						flag = 0;
 						break;
@@ -123,7 +126,7 @@ public class GameMoves extends JPanel implements KeyListener, ActionListener, Mo
 				}
 				if (value != -1) {
 					p.pl[current_player].pa[value].current += dice;
-					if (p.pl[current_player].pa[value].current == 56) {
+					if (p.pl[current_player].pa[value].current == 47) {
 						p.pl[current_player].coin++;
 					}
 					int k = 0;
@@ -156,7 +159,7 @@ public class GameMoves extends JPanel implements KeyListener, ActionListener, Mo
 				}
 			} else {
 				for (int i = 0; i < 4; i++) {
-					if (p.pl[current_player].pa[i].x == x && p.pl[current_player].pa[i].y == y && (p.pl[current_player].pa[i].current + dice) <= 56) {
+					if (p.pl[current_player].pa[i].x == x && p.pl[current_player].pa[i].y == y && (p.pl[current_player].pa[i].current + dice) <= 47) {
 						value = i;
 						flag = 0;
 						break;
@@ -164,11 +167,13 @@ public class GameMoves extends JPanel implements KeyListener, ActionListener, Mo
 				}
 				if (value != -1) {
 					p.pl[current_player].pa[value].current += dice;
-					if (p.pl[current_player].pa[value].current == 56) {
+					////HERE TOO
+					if (p.pl[current_player].pa[value].current == 47) {
 						p.pl[current_player].coin++;
 					}
 					int k = 0;
 					int hou = p.pl[current_player].pa[value].current;
+					//////IMPORTANT, MAKE CHANGES HERE????
 					if ((hou % 13) != 0 && (hou % 13) != 8 && hou < 51) {
 						for (int i = 0; i < 4; i++) {
 							if (i != current_player) {

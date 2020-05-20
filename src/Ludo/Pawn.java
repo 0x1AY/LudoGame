@@ -18,6 +18,7 @@ public class Pawn {
 	public void draw(Graphics2D g, int i, int j, int play) {
 		// TODO Auto-generated method stub
 		if (current == -1) {
+			//Temp variables determine location of piece at home(Before being activated)
 			int temp1 = 80 + (height / 2), temp2 = 50 + (width / 2);
 			x = i;
 			y = j;
@@ -28,6 +29,7 @@ public class Pawn {
 			} else if (play == 2) {
 				g.setColor(Color.GREEN);
 			} else if (play == 3) {
+
 				g.setColor(Color.RED);
 			}
 			g.fillOval(temp1 + 5 + (i * width), temp2 + 5 + (j * height), width - 10, height - 10);
@@ -35,7 +37,8 @@ public class Pawn {
 			g.setColor(Color.BLACK);
 			g.drawOval(temp1 + 5 + (i * width), temp2 + 5 + (j * height), width - 10, height - 10);
 		} else {
-			int temp1 = 80, temp2 = 50;
+			//Temp variables determine location of piece during movement
+			int temp1 = 78, temp2 = 47;
 			x = Path.ax[play][current];
 			y = Path.ay[play][current];
 			if (play == 0) {

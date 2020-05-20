@@ -6,30 +6,35 @@ public class Layout {
 
     int x, y, width, height;
     int pieceWidth, pieceHeight;
+    int pathWidth, pathHeight;
+
 
     public Layout(int xi, int yi) {
         x = xi;
         y = yi;
         width = 30;
         height = 30;
-        pieceWidth = width - 5;
-        pieceHeight = height - 5;
+        pieceWidth = width - 8;
+        pieceHeight = height - 8;
+        pathWidth = width - 4;
+        pathHeight = height - 4;
 
     }
 
     public void draw(Graphics2D g) {
         g.setColor(Color.WHITE);
+        //DIVIDING LAYOUT INTO 15 PARTS
         g.fillRect(x, y, 15 * width, 15 * height);
 
         for (int i = 1; i < 5; i++) {
             g.setColor(Color.YELLOW);
-            g.fillArc(x + 30 + (i * width), y + (7 * height), pieceWidth, pieceHeight, 0, 360);
+            g.fillArc(x + 30 + (i * width), y + (7 * height), pathWidth, pathHeight, 0, 360);
             g.setColor(Color.GREEN);
-            g.fillArc(x + ((8 + i) * width), y + (7 * height), pieceWidth, pieceHeight, 0, 360);
+            g.fillArc(x + ((8 + i) * width), y + (7 * height), pathWidth, pathHeight, 0, 360);
             g.setColor(Color.BLUE);
-            g.fillArc(x + (7 * width), y + 30 + (i * height), pieceWidth, pieceHeight, 0, 360);
+            g.fillArc(x + (7 * width), y + 30 + (i * height), pathWidth, pathHeight, 0, 360);
             g.setColor(Color.RED);
-            g.fillArc(x + ((7) * width), y + ((8 + i) * height), pieceWidth, pieceHeight, 0, 360);
+            g.fillArc(x + ((7) * width), y + ((8 + i) * height), pathWidth, pathHeight, 0, 360);
         }
 
         int temp1 = x + 45, temp2 = y + 45;
@@ -51,10 +56,10 @@ public class Layout {
         g.setColor(Color.BLACK);
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 5; j++) {
-                g.drawArc(x + ((i + 6) * width), y + 30 + (j * height), pieceWidth, pieceHeight, 0, 360);
-                g.drawArc(x + 30 + ((j) * width), y + ((i + 6) * height), pieceWidth, pieceHeight, 0, 360);
-                g.drawArc(x + ((i + 6) * width), y + ((j + 9) * height), pieceWidth, pieceHeight, 0, 360);
-                g.drawArc(x + ((j + 9) * width), y + ((i + 6) * height), pieceWidth, pieceHeight, 0, 360);
+                g.drawArc(x + ((i + 6) * width), y + 30 + (j * height), pathWidth, pathHeight, 0, 360);
+                g.drawArc(x + 30 + ((j) * width), y + ((i + 6) * height), pathWidth, pathHeight, 0, 360);
+                g.drawArc(x + ((i + 6) * width), y + ((j + 9) * height), pathWidth, pathHeight, 0, 360);
+                g.drawArc(x + ((j + 9) * width), y + ((i + 6) * height), pathWidth, pathHeight, 0, 360);
             }
         }
 
@@ -69,3 +74,4 @@ public class Layout {
         // g.drawString("2.Click on coin to move.", 550, 400);
     }
 }
+

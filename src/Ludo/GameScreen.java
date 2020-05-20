@@ -9,6 +9,7 @@ public class GameScreen {
 		jframe.setResizable(false);
 		GameMoves gm = new GameMoves();
 		gm.setFocusable(true);
+		//event listeners
 		gm.addKeyListener(gm);
 		gm.addMouseListener(gm);
 		jframe.add(gm);
